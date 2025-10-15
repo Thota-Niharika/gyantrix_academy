@@ -207,3 +207,15 @@ window.addEventListener("click", function() {
   });
 });
 
+const form = document.getElementById("leadForm");
+  const popup = document.getElementById("thankYouPopup");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); 
+    popup.style.display = "flex"; 
+  });
+
+  function closePopup() {
+    popup.style.display = "none";
+    form.reset();
+  }

@@ -66,6 +66,9 @@
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required />
 
+          <label for="email">Mobile Number</label>
+          <input type="text" id="number" name="mobile number" placeholder="Enter your number" required>
+
           <label for="course">Interested Course</label>
           <select id="course" name="course" required>
             <option value="">Select Course</option>
@@ -75,14 +78,21 @@
             <option>Cybersecurity</option>
           </select>
 
-          <button type="submit" class="submit-btn">Notify Me</button>
+          <!-- <button type="submit" class="submit-btn">Notify Me</button> -->
+           <button type="submit" class="submit-btn">Submit</button>
         </form>
 
         <!-- Thank You Message -->
-        <div id="thankYouMessage" class="thank-you">
+        <!-- <div id="thankYouMessage" class="thank-you">
           🎉 Thank you for your interest! We’ll notify you soon.
+        </div> -->
+
+        <div id="thankYouPopup" class="popup-overlay">
+          <div class="popup-box">
+            🎉 Thank you for your interest! <br> We’ll notify you soon.
+            <button onclick="closePopup()">OK</button>
+          </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -135,7 +145,7 @@
   </div>
 </footer>
 
-  <script>
+  <!-- <script>
     // Show thank-you message after form submission
     const form = document.getElementById('leadForm');
     const thankYouMessage = document.getElementById('thankYouMessage');
@@ -150,6 +160,8 @@
         thankYouMessage.style.display = 'none';
       }, 4000);
     });
-  </script>
+  </script> -->
+
+  <script src="script.js"></script>
 </body>
 </html>

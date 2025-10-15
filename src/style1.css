@@ -16,6 +16,12 @@ body {
   padding: 0;
   /* background-color: #c6b7f7; */
   /* background-color: rgb(83, 174, 234); */
+  /* background: linear-gradient(135deg, #e0f7fa, #f3e5f5); */
+/* background: linear-gradient(135deg, #e3f2fd, #f5f5f5); */
+/* background: linear-gradient(135deg, #f3e7ff, #ffe5ec); */
+/* background-color: #A8C0FF;  */
+background-color: #9458c0;
+
   color: #333;
   line-height: 1.6;
 }
@@ -216,7 +222,7 @@ body {
   gap: 1rem;                       
   justify-content: center;
   align-items: center;
-  max-width: 400px;               
+  max-width: 500px;               
 }
 
 .btn {
@@ -227,7 +233,7 @@ body {
   border-radius: 0.4rem;
   cursor: pointer;
   color: white;
-  font-weight: 500;
+  font-weight: 550;
   transition: 0.3s ease;
 }
 
@@ -256,6 +262,7 @@ body {
   display: flex;
   gap: 1.5rem;
   text-align: center;
+  margin-right: 3.5rem;
 }
 
 .stat-box {
@@ -409,6 +416,7 @@ form button {
 .acrdt{
     background-color: white;
     padding: 1.5rem;
+    margin-top: 1rem;
 
 }
 .acrdt p{
@@ -783,12 +791,14 @@ form button {
 .course-card h3 {
   margin: 1rem 0 0.5rem;
   font-size: 1.1rem;
+  height: 3rem;
 }
 
 .course-card p {
   font-size: 0.9rem;
   color: #333;
   padding-bottom: 1rem;
+  height: 6rem;
 }
 
 .course-card span {
@@ -2157,11 +2167,12 @@ form button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 .logoinfo img{
   width: 40%;
 }
+
 
 .footer-column h4 {
   font-size: 1.2rem;
@@ -2367,7 +2378,7 @@ form button {
 }
 
 /* Thank You message */
-.thank-you {
+/* .thank-you {
   display: none;
   margin-top: 15px;
   background: #2C74B3;
@@ -2381,7 +2392,112 @@ form button {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
+} */
+
+/* Popup overlay (background blur) */
+/* .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  display: none; /* hidden by default 
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
+
+/* Popup box 
+.popup-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* OK button 
+.popup-box button {
+  margin-top: 15px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup-box button:hover {
+  background: #0097a7;
+}
+
+/* Animation 
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+} */
+
+
+/* Popup overlay (background blur) */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Popup box */
+.popup-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* OK Button */
+.popup-box button {
+  margin-top: 15px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup-box button:hover {
+  background: #0097a7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 
 /* Responsive Design */
 @media (max-width: 900px) {
@@ -2487,6 +2603,7 @@ form button {
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   text-align: center;
+  margin-top: 2rem;
 }
 
 /* Headline */
