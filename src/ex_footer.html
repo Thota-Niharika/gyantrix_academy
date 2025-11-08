@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gyantrix Academy Footer</title>
+  <link rel="icon" type="image/png" href="../public/images/gyantrix1.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #010f2a;
+    }
+
+    /* FOOTER MAIN */
+    .footer {
+      background: linear-gradient(145deg, #041836, #000e22);
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05) 0,
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 2px,
+        transparent 20px
+      );
+      color: #fff;
+      padding: 50px 4% 30px;
+      position: relative;
+    }
+
+    /* MAIN CONTAINER */
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 30px;
+      gap: 40px;
+      flex-wrap: nowrap;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    /* LOGO + ADDRESS */
+    .footer-logo {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+
+    .address h3 {
+      margin-top: 15px;
+    }
+
+    .address p {
+      line-height: 1.6;
+      color: #cfd8dc;
+      margin-bottom: 15px;
+    }
+
+    /* HEADINGS */
+    .footer-section h3 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    /* LINKS */
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-section ul li {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-section ul li::before {
+      content: ">";
+      color: #ff6600;
+      font-weight: bold;
+      margin-right: 8px;
+      font-size: 1rem;
+    }
+
+    .footer-section ul li a {
+      color: #cfd8dc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: #ff6600;
+    }
+
+    /* SOCIAL ICONS */
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      width: 30px;
+      height: 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+      overflow: hidden;
+    }
+
+    .social-icons a:hover {
+      background-color: #ff6600;
+    }
+
+    .social-icons img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      filter: brightness(0) invert(1) saturate(0) contrast(100%);
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover img {
+      filter: brightness(100%) invert(0);
+    }
+
+    /* FOOTER BOTTOM */
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 25px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #cfd8dc;
+    }
+
+    .footer-bottom p {
+      margin: 5px 0;
+      flex: 1;
+    }
+
+    .heart {
+      color: #ff4d4d;
+    }
+
+    .company,
+    .dev {
+      color: #ff6600;
+      font-weight: 600;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .footer-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .footer-section {
+        flex: 1 1 45%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-section {
+        width: 100%;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- ADDRESS -->
+      <div class="footer-section address">
+        <img src="../public/images/full_GA_logo.png" alt="Gyantrix Academy Logo" class="footer-logo" />
+        <h3>Official Address</h3>
+        <p>4th Floor, Manjeera Trinity corporate, KPHB,
+          Hyderabad, Telangana - 500072</p>
+
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/photo/?fbid=122101027089065794&set=a.122101027125065794" target="_blank" aria-label="Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook">
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+          </a>
+          <a href="https://www.instagram.com/gyantrix_academy/" target="_blank" aria-label="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+          </a>
+          <a href="https://wa.me/7386879818" target="_blank" aria-label="Whatsapp">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="Whatsapp">
+          </a>
+        </div>
+      </div>
+
+      <!-- MENU -->
+      <div class="footer-section">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="#" target="_blank">Gyantrix Academy</a></li>
+          <li><a href="#" target="_blank">FAQs</a></li>
+          <li><a href="#" target="_blank">Contact Us</a></li>
+          <li><a href="#" target="_blank">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- OUR COURSES -->
+      <div class="footer-section">
+        <h3>Our Courses</h3>
+        <ul>
+          <li><a href="#" target="_blank">Full Stack Development</a></li>
+          <li><a href="#" target="_blank">Data Science & Analytics With AI</a></li>
+          <li><a href="#" target="_blank">Artificial Intelligence</a></li>
+          <li><a href="#" target="_blank">Data Analyst</a></li>
+          <li><a href="#" target="_blank">Digital Marketing</a></li>
+        </ul>
+      </div>
+
+      <!-- RESOURCES -->
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#" target="_blank">Video Lectures</a></li>
+          <li><a href="#" target="_blank">Interview Questions</a></li>
+          <li><a href="#" target="_blank">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- POLICIES -->
+      <div class="footer-section">
+        <h3>Policies</h3>
+        <ul>
+          <li><a href="#" target="_blank">Privacy Policy</a></li>
+          <li><a href="#" target="_blank">Terms & Conditions</a></li>
+          <li><a href="#" target="_blank">Refund</a></li>
+          <li><a href="#" target="_blank">Referral</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+      <p>Made with <span class="heart">❤️</span> in Hyderabad, India</p>
+      <p>Copyright © 2025 <span class="company">Future Invo Solutions Pvt Ltd</span> || All Rights Reserved</p>
+      <p>Developed By <span class="dev">Interns</span></p>
+    </div>
+  </footer>
+
+</body>
+</html>
+

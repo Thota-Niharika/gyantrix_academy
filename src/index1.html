@@ -4,111 +4,119 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gyantrix Academy</title>
-  <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="style1.css"/>
+  <link rel="stylesheet" href="./headerfooter/footerstyle.css">
   
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="navbar">
-    <a href="index1.html"><img src="../public/images/gyantrixlogo.png" alt="Gyantrix"></a>
-    <!-- <div class="logo">Gyantrix <span>Future Of Excellence</span></div> -->
-    <nav>
-      <a href="index1.html">Home</a>
-      <div class="dropdown">
-      <button class="drop-btn">About us <span class="arrow">▼</span></button>
-      <div class="dropdown-content">
-        <a href="about.html">About</a>
-        <a href="faqs.html">FAQs</a>
-      </div>
-    </div>
-
-    <!-- Courses Dropdown -->
-    <div class="dropdown">
-      <button class="drop-btn">Courses <span class="arrow">▼</span></button>
-      <div class="dropdown-content">
-        <a href="courses.html">Popular</a>
-        <a href="it.html">IT</a>
-        <a href="pharma.html">pharma</a>
-        <a href="nonit.html">Non IT</a>
-        <a href="management.html">Management</a>
-        <a href="agriculture.html">Agriculture</a>
-      </div>
-    </div>
-      <a href="events.html">Events</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact us</a>
-    </nav>
-    <div class="contact-info">
-      <span>📞 7386879818</span>
-      <span>✉️ gyantrix@academy.com</span>
-    </div>
-  </header>
-
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
+<div id="header"></div>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Building Next Generation AI and Tech Professionals</h1>
-      <h3>India’s Leading and <span class="highlight">Trusted IT Training</span></h3>
-      <p>
-        Empowering learners with classroom and online training, in collaboration with top global organizations. Gain hands-on experience, real-world skills, and industry exposure with logos from IBM, Microsoft, Infosys, Meta, Facebook, AWS, Amazon, and Google.
-      </p>
-      <p>
-        Unlock your potential through world-class courses, insightful blogs, exciting hackathons, and a vibrant community of tech enthusiasts.
-      </p>
+   <section class="hero">
+  <div class="hero-content">
+    <h1>Building Next Generation AI and Tech Professionals</h1>
+    <h3>India’s Leading and <span class="highlight">Trusted IT Training</span></h3>
 
-      <div class="course-buttons">
-        <button class="btn blue">Artificial Intelligence</button>
-        <button class="btn orange">Web Developer</button>
-        <button class="btn red">Data Science</button>
-        <button class="btn sky">Data Analyst</button>
+    <p>
+      Empowering learners with classroom and online training, in collaboration with top global organizations. Gain hands-on experience, real-world skills, and industry exposure with
+    </p>
+    <p id="com_name">IBM, Microsoft, Infosys, Meta, AWS, Amazon, Google, Wipro, YouTube, Oracle, TCS, and Deloitte.</p>
+
+    <!-- Company logos -->
+    <div class="company-logos">
+        <img src="../public/images/IBM.png" alt="IBM">
+        <img src="../public/images/micro.webp" alt="Microsoft">
+        <img src="../public/images/infosys_logo.png" alt="Infosys">
+        <img src="../public/images/Meta.png" alt="Meta">
+        <img src="../public/images/AWS.png" alt="AWS">
+        <img src="../public/images/Amazon.png" alt="Amazon">
+        <img src="../public/images/goggle.png" alt="Goggle">
+        <img src="../public/images/wipro.png" alt="Wipro">
+        <img src="../public/images/youtube.png" alt="Youtube">
       </div>
+
+    <p>
+      Unlock your potential through world-class courses, insightful blogs, exciting hackathons, and a vibrant community of tech enthusiasts.
+    </p>
+
+    <div class="course-buttons">
+      <a href="../src/courses/artificialintelligence.html" class="btn blue">Artificial Intelligence</a>
+      <a href="../src/courses/fullstack.html" class="btn orange">Web Developer</a>
+      <a href="../src/courses/ds&analyticswithai.html" class="btn red">Data Science</a>
+      <a href="../src/courses/dataanalyst.html" class="btn sky">Data Analyst</a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <div class="orbit outer-orbit">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+      <img src="https://www.pngitem.com/pimgs/m/171-1718042_javascript-logo-png-transparent-png.png" alt="JS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+      <img src="../public/images/c-icon.png" alt="c">
+      <img src="../public/images/rprogramming.jpeg" alt="RProgramming">
     </div>
 
-    <div class="hero-image">
-      <div class="center-image">
-        <img src="../public/images/heroimg.png" alt="JS Illustration">
-        </div>
+    <!-- Inner Orbit -->
+    <div class="orbit inner-orbit">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+      <img src="https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png" alt="Node.js">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+      <img src="../public/images/goL.png" alt="Go">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+      <img src="https://static.vecteezy.com/system/resources/previews/043/987/991/non_2x/sql-3d-icon-png.png" alt="SQL">
     </div>
 
-    <div class="stats">
-      <div class="stat-box">
-        <h2>5000+</h2>
-        <p>Learners</p>
-      </div>
-      <div class="stat-box">
-        <h2>100%</h2>
-        <p>Success Rate</p>
-      </div>
+    <!-- Center Image -->
+    <div class="center">
+      <img src="../public/images/hero11.png" alt="Center Logo" />
     </div>
-  </section>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box">
+      <h2>5000+</h2>
+      <p>Learners</p>
+    </div>
+    <div class="stat-box">
+      <h2>100%</h2>
+      <p>Success Rate</p>
+    </div>
+  </div>
+</section>
 
 
   <!-- Contact Section -->
   <section class="contact">
     <div class="form-section">
       <h3>Let’s Level up your career together!</h3>
-      <form>
+      <form class="lead-table" id="homeForm">
         <label for="name">Name<span class="star">*</span>:</label>
         <input type="text" id="name" name="name" required>
 
         <label for="number">Mobile<span class="star">*</span>:</label>
-        <input type="mobile number" id="number" name="mobile number" required>
+        <input type="tel" id="number" name="mobileNumber" required>
 
         <label for="email">Email<span class="star">*</span>:</label>
         <input type="email" id="email" name="email" required>
 
+        <input type="hidden" name="source" id="sourceField" value="home">
+
         <button type="submit">Submit</button>
     </form>
+
+    <div id="messages"></div>
     </div>
 
     <div class="infosection">
-      <p>Learn from Experts. Work on Real Projects. Get industry-ready. AI Enabled Learning Management System [LMS]</p>
-      <p class="pp">EMPOWERING MINDS FOR THE FUTUREto become a</p>
+      <p class="pp"><span class="highlightbtn">Gain real-world experience with guidance from industry experts.</span></p>
+      <p>Powered by an <span class="hgbtn">AI-Enabled LMS,</span> we’re empowering the next generation of</p>
       <h3><p>Artificial Intelligence</p>
       <p>Full Stack Developer</p>
       <p>Data Analyst</p>
@@ -117,7 +125,7 @@
   </section>
 
   <section class="acrdt">
-    <p>We are accredited by</p>
+    <p>We are Collaborated & Accredited by</p>
     <div class="logo-slider">
   <div class="logo-track">
     
@@ -193,7 +201,7 @@
     <h1>Boost Your Career with Certifications</h1>
     <p>Earn globally recognized certificates that showcase your skills and expertise.</p>
     <p>Certifications enhance your credibility and make you stand out to employers.</p>
-    <!-- <a href="certification.html">Get Certified</a> -->
+    <a href="certification.html">Get Certified</a>
   </div>
   <div class="sec2">
     <img src="../public/images/certificationimage.png" alt="Certification Image">
@@ -206,7 +214,7 @@
     <h1>Join Our Live Events and Webinars</h1>
     <p>Participate in live sessions with industry experts and gain practical insights.</p>
     <p>Engage with professionals, ask questions, and learn from real-world experiences.</p>
-    <!-- <a href="live-events.html">View Events</a> -->
+    <a href="liveevents_form.html?source=eventsForm">View More</a>
   </div>
   <div class="sec2">
     <img src="../public/images/liveeventsimg.png" alt="Live Events Image">
@@ -219,7 +227,7 @@
     <h1>Gain Hands-On Experience with Internships</h1>
     <p>Apply your skills in real-world projects through our internship programs.</p>
     <p>Learn, contribute, and build a strong professional portfolio to kickstart your career.</p>
-    <a href="contact.html">Apply Now</a>
+    <a href="internship_form.html?source=internshipForm">Apply Now</a>
   </div>
   <div class="sec2">
     <img src="../public/images/Intern.png" alt="Internships Image">
@@ -232,7 +240,7 @@
     <h1>Transform Learning into Career Success – with Gyantrix</h1>
     <p>Accelerate your career through personalized mentorship, project-based learning, and globally recognized certification programs.</p>
     <p>Gyantrix equips you with the tools, guidance, and confidence to stand out and thrive in your professional journey.</p>
-    <a href="contact.html">Get Started</a>
+    <a href="career_form.html?source=careerForm">Get Started</a>
   </div>
   <div class="sec2">
     <img src="../public/images/careers.png" alt="Careers Image">
@@ -245,7 +253,7 @@
     <h1>Build Real-World Projects</h1>
     <p>Work on projects that simulate real industry scenarios and challenges.</p>
     <p>Showcase your project portfolio to employers and gain practical experience.</p>
-    <!-- <a href="projects.html">View Projects</a> -->
+    <a href="project_form.html?source=projectsForm">Know More</a>
   </div>
   <div class="sec2">
     <img src="../public/images/projectimage.png" alt="Projects Image">
@@ -258,7 +266,7 @@
     <h1>Learn from Experienced Mentors</h1>
     <p>Get personalized guidance from industry professionals who know the path to success.</p>
     <p>Receive career advice, feedback on projects, and mentorship to fast-track your growth.</p>
-    <a href="contact.html">Connect Now</a>
+    <a href="mentorship_form.html?source=mentorshipForm">Connect Now</a>
   </div>
   <div class="sec2">
     <img src="../public/images/mentorshipimg.png" alt="Mentorship Image">
@@ -271,7 +279,7 @@
     <h1>Get Answers to Your Questions</h1>
     <p>Find solutions to common queries and learn from community discussions.</p>
     <p>Our Q&A platform ensures you never get stuck while learning or applying skills.</p>
-    <!-- <a href="answers.html">Explore Answers</a> -->
+    <a href="answer_form.html?source=answerForm">Talk with Expert</a>
   </div>
   <div class="sec2">
     <img src="../public/images/answering.png" alt="Answers Image">
@@ -283,9 +291,10 @@
   <section class="offer">
     <h2>WHAT WE OFFER</h2>
     <div class="offer-grid">
-      <div class="offer-card">Learn & Grow</div>
-      <div class="offer-card">Project-Based Training</div>
-      <div class="offer-card">AI & ML Focus</div>
+      <div class="offer-card">Live & Recorded</div>
+      <div class="offer-card">Real Projects</div>
+      <div class="offer-card">AI Based LMS</div>
+      <div class="offer-card">Mentor Access</div>
       <div class="offer-card">Career Support</div>
     </div>
   </section>
@@ -297,7 +306,7 @@
 
   <div class="filter-buttons">
     <button class="filter-btn active" data-category="popular">Popular</button>
-    <button class="filter-btn" data-category="it">IT</button>
+    <button class="filter-btn" data-category="it">IT(Tech)</button>
     <button class="filter-btn" data-category="pharma">Pharma</button>
     <button class="filter-btn" data-category="non-it">Non - IT</button>
     <button class="filter-btn" data-category="management">Management</button>
@@ -310,11 +319,11 @@
       <img src="../public/images/AI.png" alt="Data Science" />
         <h3>Artificial Intelligence & Data Analyst</h3>
         <p>Artificial Intelligence is the development of computer systems that can perform tasks requiring human-like intelligence.</p>
-      <span>₹12,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/artificialintelligence.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -323,23 +332,23 @@
       <img src="../public/images/fullstackdev.png" alt="Full Stack Development">
       <h3>Full Stack Development</h3>
       <p>Master both front-end and back-end skills to build complete, scalable web applications from scratch.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/fullstack.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
-    <div class="course-card" data-category="it popular">
+    <div class="course-card" data-category="it">
       <img src="../public/images/datascience.png" alt="Data Science">
       <h3>Data Science & Analytics With AI</h3>
       <p>Transform data into intelligence and insights through the power of Artificial Intelligence and Analytics.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/ds&analyticswithai.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -347,11 +356,11 @@
       <img src="../public/images/businessanalyst1.jpg" alt="Business Analytics">
       <h3>Business Analyst</h3>
       <p>A Business Analyst identifies business needs and recommends effective solutions.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/businessanalyst.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -359,11 +368,11 @@
       <img src="../public/images/dataanalyst.png" alt="Data Analyst">
       <h3>Data Analyst</h3>
       <p>A Data Analyst interprets and transforms data into actionable insights for decision-making.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/dataanalyst.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -372,11 +381,11 @@
       <img src="../public/images/medicalcoding.jpg" alt="Medical Coding">
       <h3>Medical Coding</h3>
       <p>Medical Coding is the process of translating healthcare diagnoses, procedures, and treatments into standardized codes for records and billing.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/medicalCoding.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -384,11 +393,11 @@
       <img src="../public/images/medicalscribing.jpg" alt="Medical Scribing">
       <h3>Medical Scribing</h3>
       <p>Medical Scribing involves documenting patient encounters and clinical information on behalf of healthcare providers.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/medicalscribing.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -396,11 +405,11 @@
       <img src="../public/images/geneticeng.jpg" alt="Genetic Engineering">
       <h3>Genetic Engineering</h3>
       <p>Genetic Engineering involves modifying an organism's DNA to achieve desired traits or outcomes.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/geneticeng.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -408,11 +417,11 @@
       <img src="../public/images/pharmaco-vigilance.jpg" alt="Pharmacovigilance">
       <h3>Pharmacovigilance</h3>
       <p>Pharmacovigilance is the science of monitoring and ensuring the safety of medicines.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/pharmacovigilance.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -422,11 +431,11 @@
       <img src="../public/images/digitalmarketing1.png" alt="Digital Marketing">
       <h3>Digital Marketing</h3>
       <p>Empower brands to reach, engage, and grow through data-driven digital marketing strategies.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/digitalmarketing.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -434,23 +443,23 @@
       <img src="../public/images/productmanagement.jpg" alt="Product Management">
       <h3>Product Management</h3>
       <p>Product Management involves planning, developing, and overseeing a product to meet market needs and business goals.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/productmanagement.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
-    <div class="course-card" data-category="non-it">
+    <div class="course-card" data-category="non-it popular">
       <img src="../public/images/humanresourse.jpg" alt="Human Resources">
       <h3>Human Resources</h3>
       <p>Human Resources manages recruitment, employee relations, and workforce development within an organization.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/humanresourse.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -459,11 +468,11 @@
       <img src="../public/images/humanresourse.jpg" alt="Human Resources">
       <h3>Human Resources</h3>
       <p>Human Resources manages recruitment, employee relations, and workforce development within an organization.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/humanresourse.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -471,11 +480,11 @@
       <img src="../public/images/businessanalyst1.jpg" alt="Business Analytics">
       <h3>Business Analyst</h3>
       <p>A Business Analyst identifies business needs and recommends effective solutions.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/businessanalyst.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -483,23 +492,23 @@
       <img src="../public/images/dataanalyst.png" alt="Data Analyst">
       <h3>Data Analyst</h3>
       <p>A Data Analyst interprets and transforms data into actionable insights for decision-making.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/dataanalyst.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
-    <div class="course-card" data-category="management">
+    <div class="course-card" data-category="management popular">
       <img src="../public/images/digitalmarketing1.png" alt="Digital Marketing">
       <h3>Digital Marketing</h3>
       <p>Empower brands to reach, engage, and grow through data-driven digital marketing strategies.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/digitalmarketing.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -508,11 +517,11 @@
       <img src="../public/images/nanoscience&technology.jpg" alt="Nano Science & Technology">
       <h3>Nano Science & Technology</h3>
       <p>Nano Science & Technology studies and manipulates materials at the atomic and molecular scale for advanced applications.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/nanoscience.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -520,11 +529,11 @@
       <img src="../public/images/geneticeng.jpg" alt="Genetic Engineering">
       <h3>Genetic Engineering</h3>
       <p>Genetic Engineering is the science of altering an organism’s genes to achieve specific traits or outcomes.</p>
-      <span>₹9,999</span>
+      <span>₹14,999</span>
 
       <div class="card-buttons">
-    <button class="know-more-btn">Know More</button>
-    <button class="payment-btn">Enroll</button>
+    <a href="./courses/geneticeng.html" class="know-more-btn">Know More</a>
+    <a href="contact.html" class="payment-btn">Enroll</a>
   </div>
     </div>
 
@@ -533,9 +542,79 @@
 
 
   <!-- PARTNERS -->
-  <section class="partners">
+<section class="partners">
+  <!-- HEADING CENTERED -->
+  <div class="partners-heading">
+    <h3>Trusted by 500+ Enterprises</h3>
+    <p>Empowering 500+ enterprises to accelerate growth & innovation by building future-ready AI teams.</p>
+  </div>
+
+  <!-- MAIN CONTENT (TEXT + LOGOS) -->
+  <div class="partners-main">
+    <!-- LEFT CONTENT -->
+    <div class="partners-content">
+      <p>Gyantrix Academy learners are recognized for their excellence in Full Stack Development, Data Science & Analytics with AI, DevOps with AWS, Software Testing, Digital Marketing, and Investment Banking.</p>
+      <p>Top organizations trust our graduates for their hands-on expertise and job readiness.</p>
+    </div>
+
+    <div class="partners-logos">
+  <div class="logo-row left-scroll">
+    <div class="logo-track">
+      <img src="../public/images/IBM.png" alt="IBM" />
+      <img src="../public/images/Wiprologo1.jpg" alt="Wipro" />
+      <img src="../public/images/infosys_logo.png" alt="Infosys" />
+      <img src="../public/images/amazon.png" alt="Amazon" />
+      <img src="../public/images/genpact.jpg" alt="Genpact" />
+      <img src="../public/images/accenture.webp" alt="Accenture" />
+      <img src="../public/images/Intel.png" alt="Intel" />
+    </div>
+    <div class="logo-track">
+      <!-- Repeat exact same logos -->
+      <img src="../public/images/IBM.png" alt="IBM" />
+      <img src="../public/images/Wiprologo1.jpg" alt="Wipro" />
+      <img src="../public/images/infosys_logo.png" alt="Infosys" />
+      <img src="../public/images/amazon.png" alt="Amazon" />
+      <img src="../public/images/genpact.jpg" alt="Genpact" />
+      <img src="../public/images/accenture.webp" alt="Accenture" />
+      <img src="../public/images/Intel.png" alt="Intel" />
+    </div>
+  </div>
+
+  <div class="logo-row right-scroll">
+    <div class="logo-track">
+      <img src="../public/images/publicis-sapient.png" alt="Publicis Sapient">
+      <img src="../public/images/wns.jpg" alt="WNS">
+      <img src="../public/images/fractal.png" alt="Fractal">
+      <img src="../public/images/clubmahindra.png" alt="ClubMahindra">
+      <img src="../public/images/ABInBev.png" alt="ABInBev">
+      <img src="../public/images/TVS.png" alt="TVS">
+      <img src="../public/images/americanexpress.png" alt="American Express">
+    </div>
+    <div class="logo-track">
+      <!-- Repeat same logos -->
+      <img src="../public/images/publicis-sapient.png" alt="Publicis Sapient">
+      <img src="../public/images/wns.jpg" alt="WNS">
+      <img src="../public/images/fractal.png" alt="Fractal">
+      <img src="../public/images/clubmahindra.png" alt="ClubMahindra">
+      <img src="../public/images/ABInBev.png" alt="ABInBev">
+      <img src="../public/images/TVS.png" alt="TVS">
+      <img src="../public/images/americanexpress.png" alt="American Express">
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+  <!-- <section class="partners">
     <h3>Trusted by 500+ Enterprises</h3>
     <p>Empowering 500+ enterprises to accelerate growth and innovation by building future-ready AI teams</p>
+    <div class="enterprises_content">
+      <p>Gyantrix Academy learners are recognized for their excellence in Full Stack Development, Data Science & Analytics with AI, DevOps with AWS, Software Testing, Digital Marketing, and Investment Banking.</p>
+      <p>Top organizations trust our graduates for their hands-on expertise and job readiness.</p>
+      <p>At Gyantrix Academy, we empower individuals from diverse backgrounds to build transformative, future-ready careers.</p>
+    </div>
     <div class="log">
       <img src="../public/images/IBM.png" alt="IBM" />
       <img src="../public/images/Wiprologo1.jpg" alt="Wipro" />
@@ -554,7 +633,7 @@
       <img src="../public/images/sapient.png" alt="Sapient">
       <img src="../public/images/americanexpress.png" alt="American Express">
     </div>
-  </section>
+  </section> -->
 
   <!-- WHY CHOOSE -->
   <section class="why-choose">
@@ -615,7 +694,7 @@
           <div class="featuree">
             <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="">
             <div class="text">
-            <b>IIT</b>
+            <b>Globally</b>
             <p>Approved Curriculum</p>
             </div>
           </div>
@@ -634,7 +713,7 @@
             </div>
           </div>
           <div class="featuree">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135776.png" alt="">
+            <img src="../public/images/image.png" alt="">
             <div class="text">
               <b>Classroom</b>
             <p>Recordings</p>
@@ -688,21 +767,26 @@
 
   <!-- Form -->
   <div class="form-box">
-    <form>
+    <form class="lead-table" id="skillSection">
         <label for="name">Name<span class="star">*</span>:</label>
         <input type="text" id="name" name="name" required>
 
         <label for="number">Mobile Number<span class="star">*</span>:</label>
-        <input type="mobile number" id="number" name="mobile number" required>
+        <input type="tel" id="number" name="mobileNumber" required>
 
         <label for="email">Email<span class="star">*</span>:</label>
         <input type="email" id="email" name="email" required>
 
         <label>Message</label>
-        <textarea rows="3"></textarea>
+        <textarea rows="3" name="message"></textarea>
+
+        <input type="hidden" name="source" id="sourceField" value="skillsSection">
 
         <button type="submit">Submit</button>
+        
     </form>
+      
+    <div class="messages"></div>
   </div>
 </div>
 </section>
@@ -711,7 +795,7 @@
   <section class="journey-section">
     <h2>Turn Your Learning Into a Career That You’re Proud Of</h2>
      <div class="labels">
-          <span class="start">Start</span>
+          <span class="start">Start <span class="line">as a Student.</span></span>
         </div>
 
     <div class="journey-container">
@@ -772,42 +856,39 @@ Q850 500 950 300"
     </div>
 
     <div class="labels">
-      <span class="end">End</span>
+      <span class="end">End
+      <span class="line">like a Professional.</span></span>
     </div>
 
   </section>
  
 
   <!-- Career Services Section -->
-  <section class="career-services">
-    <h2 class="title">Career Services</h2>
+  <!-- <section class="program-gallery">
+     <div class="image-container">
 
-    <div class="career-container">
-      <div class="career-left">
-        <p>Technical <span>Seminars</span></p>
-        <p class="arrow">↓</p>
-        <p>Mock <span>Interviews</span></p>
-         <p class="arrow">↓</p>
-        <p>CRT & <span>Job Ready Skills</span></p>
-         <p class="arrow">↓</p>
-        <p>Dedicated <span>Job Portal</span></p>
-         <p class="arrow">↓</p>
-        <p>Internship Opportunity in <span>IT Companies</span></p>
-         <p class="arrow" id="arr">↓</p><br>
-
-        <a href="contact.html" class="callback-btn">Request Call Back</a>
-        <!-- <button class="callback-btn">Request Call Back</button> -->
-      </div>
-
-      <div class="career-right">
-        <div class="circle"></div>
-        <div class="img-grid">
-          <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c" alt="Seminar">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Interview">
-          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="Team">
+        <div class="image-slide">
+            <img src="../public/images/technicalseminar1.png" alt="Technical Seminar">
         </div>
-      </div>
+        
+        <div class="image-slide">
+            <img src="../public/images/MockInterview1.png" alt="Mock Interview">
+        </div>
+        
+        <div class="image-slide">
+            <img src="../public/images/CRT.png" alt="CRT & Job Ready Skills">
+        </div>
+        
+        <div class="image-slide">
+            <img src="../public/images/JP.png" alt="Job Portal">
+        </div>
+        
+        <div class="image-slide">
+            <img src="../public/images/InternshipOpp.png" alt="Internship Opportunities">
+        </div>
+
     </div>
+        <a href="contact.html?source=reqForm">Request Call Back</a> 
   </section>
 
   <section class="about-section" id="about">
@@ -835,14 +916,128 @@ Q850 500 950 300"
       </p>
     </div>
   </div>
+</section> -->
+
+  <!-- Career Services Section -->
+<!-- <section class="career-services">
+  <div class="services-content">
+    <h2 class="section-title">Career Services</h2>
+  </div>
+
+  <div class="program-gallery">
+    <div class="image-container">
+      <div class="image-slide">
+        <div class="caption">
+          <h3>Technical Seminars</h3>
+          <p>Industry experts share emerging technologies and innovation trends.</p>
+        </div>
+        <img src="../public/images/technicalseminar1.png" alt="Technical Seminar">
+      </div>
+
+      <div class="image-slide">
+        <div class="caption">
+          <h3>Mock Interviews</h3>
+          <p>Real interview experience to boost confidence and performance.</p>
+        </div>
+        <img src="../public/images/MockInterview1.png" alt="Mock Interview">
+      </div>
+
+      <div class="image-slide">
+        <div class="caption">
+          <h3>CRT & Job Ready Skills</h3>
+          <p>Comprehensive aptitude and communication training sessions.</p>
+        </div>
+        <img src="../public/images/CRT.png" alt="CRT & Job Ready Skills">
+      </div>
+
+      <div class="image-slide">
+        <div class="caption">
+          <h3>Placement Assistance</h3>
+          <p>Access exclusive job listings and personalized career guidance.</p>
+        </div>
+        <img src="../public/images/JP.png" alt="Job Portal">
+      </div>
+
+      <div class="image-slide">
+        <div class="caption">
+          <h3>Internship Opportunities</h3>
+          <p>Hands-on projects and internships to gain real industry exposure.</p>
+        </div>
+        <img src="../public/images/InternshipOpp.png" alt="Internship Opportunities">
+      </div>
+    </div>
+
+    <a href="contact.html?source=reqForm" class="cta-btn">Request Call Back</a>
+  </div>
+</section> -->
+
+    <section class="career-services">
+  <div class="career-wrapper">
+    <!-- LEFT SIDE CONTENT -->
+    <div class="services-info">
+      <h2>Career Services</h2>
+
+      <div class="scroll-headings">
+        <div class="heading-item active-heading" data-target="slide-seminars">Technical Seminars</div>
+        <div class="heading-item" data-target="slide-mock">Mock Interviews</div>
+        <div class="heading-item" data-target="slide-crt">CRT & Job Ready Skills</div>
+        <div class="heading-item" data-target="slide-placement">Placement Assistance</div>
+        <div class="heading-item" data-target="slide-internship">Internship Opportunities</div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE IMAGE SCROLL -->
+    <div class="program-gallery">
+      <div class="image-slide">
+        <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=1000&q=80" alt="Technical Seminar">
+        <div class="caption">
+          <h3>Technical Seminars</h3>
+          <p>Learn from top industry experts on emerging technologies and innovation trends.</p>
+        </div>
+      </div>
+
+      <div class="image-slide">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=80" alt="Mock Interview">
+        <div class="caption">
+          <h3>Mock Interviews</h3>
+          <p>Gain real interview experience and build confidence through expert feedback.</p>
+        </div>
+      </div>
+
+      <div class="image-slide">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="CRT Training">
+        <div class="caption">
+          <h3>CRT & Job Ready Skills</h3>
+          <p>Master aptitude, reasoning, and communication skills to become job ready.</p>
+        </div>
+      </div>
+
+      <div class="image-slide">
+        <img src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=900&q=80" alt="Placement Assistance">
+        <div class="caption">
+          <h3>Placement Assistance</h3>
+          <p>Exclusive access to career mentors and job placement support from experts.</p>
+        </div>
+      </div>
+
+      <div class="image-slide">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=80" alt="Internship Opportunities">
+        <div class="caption">
+          <h3>Internship Opportunities</h3>
+          <p>Hands-on internship programs to gain real-world experience and exposure.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="contact.html?source=reqForm" class="cta-btn">Request Call Back</a>
 </section>
 
-    
+
   <section class="faq-section">
 
         <h2>Frequently Asked Questions</h2>
             <p>Got more questions? Feel free to contact us for more information.</p>
-            <a href="contact.html" class="contact-button">Contact Us</a>
+            <a href="contact.html?source=contactSecForm">Contact Us</a>
         
         <div class="faq-content">
             <div class="faq-column">
@@ -883,14 +1078,14 @@ Q850 500 950 300"
                 </div>
 
                 <div class="faq-item">
-                    <input type="checkbox" id="faq-2-7" class="faq-toggle">
-                    <label for="faq-2-7" class="faq-question">What certifications will I receive after completing the program?</label>
+                    <input type="checkbox" id="faq-1-7" class="faq-toggle">
+                    <label for="faq-1-7" class="faq-question">What certifications will I receive after completing the program?</label>
                     <div class="faq-answer"><p>You will receive a program completion certificate from Gyantrix, in addition to preparation support for external vendor certifications (e.g., AWS, Microsoft, Cisco).</p></div>
                 </div>
                  
                 <div class="faq-item">
-                    <input type="checkbox" id="faq-2-3" class="faq-toggle">
-                    <label for="faq-2-3" class="faq-question">What training modes are available?</label>
+                    <input type="checkbox" id="faq-1-8" class="faq-toggle">
+                    <label for="faq-1-8" class="faq-question">What training modes are available in Gyantrix Academy?</label>
                     <div class="faq-answer"><p>We offer online live classes, self-paced learning modules, and dedicated corporate on-site or virtual bootcamps.</p></div>
                 </div>
             </div>
@@ -909,32 +1104,32 @@ Q850 500 950 300"
                 </div>
                 
                 <div class="faq-item">
-                    <input type="checkbox" id="faq-2-4" class="faq-toggle">
-                    <label for="faq-2-4" class="faq-question">Do you provide certification after training?</label>
+                    <input type="checkbox" id="faq-2-3" class="faq-toggle">
+                    <label for="faq-2-3" class="faq-question">Do you provide certification after training?</label>
                     <div class="faq-answer"><p>Yes, participants receive an industry-recognized certification from Gyantrix Academy upon successful completion of the course and final project/exam.</p></div>
                 </div>
                 
                 <div class="faq-item">
-                    <input type="checkbox" id="faq-2-5" class="faq-toggle">
-                    <label for="faq-2-5" class="faq-question">How are trainers selected at Gyantrix Academy?</label>
+                    <input type="checkbox" id="faq-2-4" class="faq-toggle">
+                    <label for="faq-2-4" class="faq-question">How are trainers selected at Gyantrix Academy?</label>
                     <div class="faq-answer"><p>Our trainers are industry veterans with extensive experience, selected through a rigorous process that ensures both deep domain knowledge and teaching proficiency.</p></div>
                 </div>
                 
                 <div class="faq-item">
-                    <input type="checkbox" id="faq-2-6" class="faq-toggle">
-                    <label for="faq-2-6" class="faq-question">Do you provide internship opportunities with MNCs and IT companies?</label>
+                    <input type="checkbox" id="faq-2-5" class="faq-toggle">
+                    <label for="faq-2-5" class="faq-question">Do you provide internship opportunity with MNCs and IT companies?</label>
                     <div class="faq-answer"><p>We facilitate internship opportunities and project-based learning through our partnerships, helping candidates gain relevant work experience.</p></div>
                 </div>
 
                 <div class="faq-item">
-                    <input type="checkbox" id="faq-1-7" class="faq-toggle">
-                    <label for="faq-1-7" class="faq-question">How do these certifications benefit my career?</label>
+                    <input type="checkbox" id="faq-2-6" class="faq-toggle">
+                    <label for="faq-2-6" class="faq-question">How do these certifications benefit my career?</label>
                     <div class="faq-answer"><p>The certifications enhance your profile credibility, demonstrate specialized skills to recruiters, and significantly boost your chances of securing higher-paying jobs.</p></div>
                 </div>
 
                 <div class="faq-item">
-                    <input type="checkbox" id="faq-1-8" class="faq-toggle">
-                    <label for="faq-1-8" class="faq-question">Is 100% placement assistance guaranteed?</label>
+                    <input type="checkbox" id="faq-2-7" class="faq-toggle">
+                    <label for="faq-2-7" class="faq-question">Is 100% placement assistance guaranteed?</label>
                     <div class="faq-answer"><p>While we cannot guarantee 100% job placement, we provide dedicated, continuous placement support and interview opportunities until a candidate is successfully placed.</p></div>
                 </div>
             </div>
@@ -943,87 +1138,96 @@ Q850 500 950 300"
 
 
       <!-- Testimonials Section -->
-  <section class="testimonials">
-    <h2>What Students Say</h2>
+ <section class="testimonials">
+  <h2>What Students Say</h2>
 
-    <div class="testimonials-grid">
-      <div class="slider">
-      <div class="crd">
-        <p>Gyantrix transformed the way I think about learning. The mentors not only teach — they guide, motivate, and prepare you for real-world challenges.</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Rakesh Choudhary</h4>
+  <div class="testimonials-grid">
+
+    <!-- Row 1: scrolls left -->
+    <div class="slider row1">
+      <div class="track">
+        <div class="crd">
+          <p>Gyantrix transformed the way I think about learning. The mentors not only teach — they guide, motivate, and prepare you for real-world challenges.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Rakesh Choudhary</h4>
+        </div>
+        <div class="crd">
+          <p>The Data Science program at Gyantrix helped me gain job-ready skills and land my first internship in less than three months. Highly recommended!</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Ananya Gupta</h4>
+        </div>
+        <div class="crd">
+          <p>The training here is industry-focused. Every concept is taught with practical use cases, making me feel ready for any professional challenge.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Karthik Goud</h4>
+        </div>
+        <div class="crd">
+          <p>I enrolled in the Full Stack program, and it completely changed my career path. The support team was with me from day one to placement day.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Swati Nair</h4>
+        </div>
+        <div class="crd">
+          <p>From resume building to interview preparation — Gyantrix covers it all. I’m now working with one of the top MNCs, and it all started here.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Amit Malhotra</h4>
+        </div>
+
+        <!-- Duplicate for seamless loop -->
+        <div class="crd">
+          <p>Gyantrix transformed the way I think about learning. The mentors not only teach — they guide, motivate, and prepare you for real-world challenges.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Rakesh Choudhary</h4>
+        </div>
+        <div class="crd">
+          <p>The Data Science program at Gyantrix helped me gain job-ready skills and land my first internship in less than three months. Highly recommended!</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Ananya Gupta</h4>
+        </div>
       </div>
-      <div class="crd">
-        <p>The Data Science program at Gyantrix helped me gain job-ready skills and land my first internship in less than three months. Highly recommended!</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Ananya Gupta</h4>
-      </div>
-      <div class="crd">
-        <p>Mock interviews and career mentoring gave me the confidence I needed. I aced my technical interview and joined a reputed IT company right after graduation.</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Sidharth Menon</h4>
-      </div>
-      <div class="crd">
-        <p>The training here is industry-focused. Every concept is taught with practical use cases, making me feel ready for any professional challenge.</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Karthik Goud</h4>
-      </div>
-      <div class="crd">
-        <p>I enrolled in the Full Stack program, and it completely changed my career path. The support team was with me from day one to placement day.</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Swati Nair</h4>
-      </div>
-      <div class="crd">
-        <p>From resume building to interview preparation — Gyantrix covers it all. I’m now working with one of the top MNCs, and it all started here.</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Amit Malhotra</h4>
-      </div>
-      <!-- <div class="card">
-      <p>The placement assistance is top-notch! The mock tests, HR sessions, and continuous feedback made me feel completely ready for my interviews.</p>
-      <div class="stars">★★★★★</div>
-      <h4>— Rohan Sinha</h4>
     </div>
 
-    <div class="card">
-      <p>Thanks to Gyantrix, I turned my passion for technology into a profession. The mentors really focus on building both skills and confidence.</p>
-      <div class="stars">★★★★★</div>
-      <h4>— Meera Iyer</h4>
-    </div> -->
+    <!-- Row 2: scrolls right -->
+    <div class="slider row2">
+      <div class="track">
+        <div class="crd">
+          <p>From resume building to interview preparation — Gyantrix covers it all. I’m now working with one of the top MNCs, and it all started here.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Amit Malhotra</h4>
+        </div>
+        <div class="crd">
+          <p>I enrolled in the Full Stack program, and it completely changed my career path. The support team was with me from day one to placement day.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Swati Nair</h4>
+        </div>
+        <div class="crd">
+          <p>The training here is industry-focused. Every concept is taught with practical use cases, making me feel ready for any professional challenge.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Karthik Goud</h4>
+        </div>
+        <div class="crd">
+          <p>The Data Science program at Gyantrix helped me gain job-ready skills and land my first internship in less than three months. Highly recommended!</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Ananya Gupta</h4>
+        </div>
+        <div class="crd">
+          <p>Gyantrix transformed the way I think about learning. The mentors not only teach — they guide, motivate, and prepare you for real-world challenges.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Rakesh Choudhary</h4>
+        </div>
 
-
-    <!-- Duplicates -->
-     <div class="crd">
-        <p>Gyantrix transformed the way I think about learning. The mentors not only teach — they guide, motivate, and prepare you for real-world challenges.</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Rakesh Choudhary</h4>
-      </div>
-      <div class="crd">
-        <p>The Data Science program at Gyantrix helped me gain job-ready skills and land my first internship in less than three months. Highly recommended!</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Ananya Gupta</h4>
-      </div>
-      <div class="crd">
-        <p>Mock interviews and career mentoring gave me the confidence I needed. I aced my technical interview and joined a reputed IT company right after graduation.</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Sidharth Menon</h4>
-      </div>
-      <div class="crd">
-        <p>The training here is industry-focused. Every concept is taught with practical use cases, making me feel ready for any professional challenge.</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Karthik Goud</h4>
-      </div>
-      <div class="crd">
-        <p>I enrolled in the Full Stack program, and it completely changed my career path. The support team was with me from day one to placement day.</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Swati Nair</h4>
-      </div>
-      <div class="crd">
-        <p>From resume building to interview preparation — Gyantrix covers it all. I’m now working with one of the top MNCs, and it all started here.</p>
-        <div class="stars">★★★★★</div>
-        <h4>— Amit Malhotra</h4>
-      </div>
-      
+        <!-- Duplicate for seamless loop -->
+        <div class="crd">
+          <p>From resume building to interview preparation — Gyantrix covers it all. I’m now working with one of the top MNCs, and it all started here.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Amit Malhotra</h4>
+        </div>
+        <div class="crd">
+          <p>I enrolled in the Full Stack program, and it completely changed my career path. The support team was with me from day one to placement day.</p>
+          <div class="stars">★★★★★</div>
+          <h4>— Swati Nair</h4>
+        </div>
     </div>
+  </div>
     </div>
 
     <h3 class="feature-title">Featured In</h3>
@@ -1052,7 +1256,7 @@ Q850 500 950 300"
 
   <div class="connectform-container">
     <div class="connectform">
-      <form>
+      <form class="lead-table" id="footerSection">
         <label for="name">Your Name<span class="star">*</span>:</label>
         <input type="text" id="name" name="name" required>
 
@@ -1060,10 +1264,13 @@ Q850 500 950 300"
         <input type="email" id="email" name="email" required>
 
         <label for="number">Mobile Number<span class="star">*</span>:</label>
-        <input type="text" id="number" name="mobile number" required>
+        <input type="tel" id="number" name="mobileNumber" required>
+
+        <input type="hidden" name="source" id="sourceField" value="contact">
 
         <button type="submit">Submit</button>
       </form>
+      <div class="messages"></div>
     </div>
 
     <div class="connectform">
@@ -1071,69 +1278,11 @@ Q850 500 950 300"
     </div>
   </div>
 </section>
-
-
-
-  <footer class="footer">
-  <div class="footer-columns">
-    <div class="logoinfo">
-      <a href="index1.html"><img src="../public/images/gyantrixlogo.png" alt="Gyantrix Logo"></a>
-      
-    </div>
-    <div class="footer-column">
-      <h4>Menu</h4>
-      <ul>
-        <li><a href="#">Gyantrix Academy</a></li>
-        <li><a href="faqs.html">FAQs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="careers.html">Careers</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Our Courses</h4>
-      <ul>
-        <li><a href="fullstackdev.html">Full Stack Development</a></li>
-        <li><a href="ds&analyticsAI.html">Data Science & Analytics With AI</a></li>
-        <li><a href="ai.html">Artificial Intelligence</a></li>
-        <li><a href="dataanalyst.html">Data Analyst</a></li>
-        <li><a href="dm.html">Digital Marketing</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Resources</h4>
-      <ul>
-        <li><a href="videolectures.html">Video Lectures</a></li>
-        <li><a href="interviewquestions.html">Interview Questions</a></li>
-        <li><a href="blog.html">Blogs</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Address</h4>
-        <p>Gyantrix Academy</p>
-        <p>4th floor,</p>
-        <p>Manjeera Trinity corporate,</p>
-        <p>KPHB, HYDERABAD</p>
-    </div>
-
-    <p>join us to gain industry insights and hands-on experience for success in the digital world</p>
-  </div>
-
-  <div class="footer-bottom">
-    <p>©All Copyright 2025 by <a href="#">Future Invo solutions</a> || All rights reserved.</p>
-    <p class="followp">Follow us on:</p>
-    <div class="socials">
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
-      <a href="https://www.facebook.com/photo/?fbid=122101027089065794&set=a.122101027125065794"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-      <a href="https://www.instagram.com/gyantrix_academy/"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
-      <a href="https://wa.me/7386879818"><img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="Whatsapp"></a>
-    </div>
-  </div>
-</footer>
+  <div id="footer"></div>
 
 <script src="script.js"></script>
+<script src="navbar.js"></script>
+<script src="./headerfooter/include.js"></script>
 
 </body>
 </html>

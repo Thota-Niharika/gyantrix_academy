@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Management Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      background-color: #f3f5fc;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #0a1a4f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+    }
+    .img-sec{
+      width: 2rem;
+    }
+    .sidebar h2 {
+      text-align: center;
+      font-size: 22px;
+    }
+    .sidebar a {
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: block;
+      font-weight: 500;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      background-color: #182b70;
+    }
+    .content {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+   
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #0a1a4f;
+      color: white;
+    }
+    tr:hover {
+      background-color: #f4f6ff;
+    }
+    select {
+      padding: 5px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    /* Stats Cards */
+    .stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #0a1a4f;
+      color: white;
+      padding: 25px 40px;
+      border-radius: 10px;
+      min-width: 200px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .card.orange {
+      background: linear-gradient(90deg, #ff7a00, #e43ab2, #3b82f6);
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+
+    @media (max-width: 992px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .sidebar a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .stats {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card {
+    min-width: 160px;
+    padding: 20px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .sidebar h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar a {
+    padding: 10px 0;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 13px;
+    overflow-x: auto;
+    display: block;
+  }
+
+  th,
+  td {
+    padding: 8px 10px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2> <img class="img-sec" src="../public/images/gyantrix1.png" alt=""> Dashboard</h2>
+    <a href="#" class="active" onclick="showSection('home', event)">🏠 Home</a>
+    <a href="#" onclick="showSection('leads', event)">📋 Leads</a>
+  </div>
+
+  <div class="content">
+    <!-- HOME SECTION -->
+    <div id="home" class="section active">
+      <h1>Dashboard Overview</h1>
+      <div class="stats">
+        <div class="card">
+          <h2>Total Leads</h2>
+          <h1 id="leadCount">0</h1>
+        </div>
+        <div class="card orange">
+          <h2>Follow Ups</h2>
+          <h1 id="followUpCount">0</h1>
+        </div>
+      </div>
+
+      <h2 style="margin-top:40px;">🔁 Upcoming Follow-ups</h2>
+      <table id="followupTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Source</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- LEADS SECTION -->
+    <div id="leads" class="section">
+      <h1>All Leads</h1>
+      <table id="leadTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Source</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+  const API_URL = "http://192.168.0.168:8090/api/leads";
+
+  async function loadLeads() {
+    try {
+      const res = await fetch(API_URL);
+      const leads = await res.json();
+
+      // Update total leads count
+      document.getElementById("leadCount").innerText = leads.length;
+
+      // Get today's date
+      const today = new Date().toISOString().split("T")[0]; // "2025-11-05"
+
+      // Filter today's new leads (based on createdAt)
+      const todayNewLeads = leads.filter(l => {
+        if (!l.createdAt) return false;
+        const createdDate = new Date(l.createdAt);
+        if (isNaN(createdDate)) return false;
+        const createdDateStr = createdDate.toISOString().split("T")[0];
+        return createdDateStr === today;
+      });
+
+      // Update follow-up count with today's new leads
+      document.getElementById("followUpCount").innerText = todayNewLeads.length;
+
+      // Fill "Upcoming Follow-ups" table with today's leads
+      const followupTable = document.querySelector("#followupTable tbody");
+      followupTable.innerHTML = "";
+      if (todayNewLeads.length === 0) {
+        followupTable.innerHTML = `<tr><td colspan="6" style="text-align:center; color:gray;">No new leads today</td></tr>`;
+      } else {
+        todayNewLeads.forEach(lead => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${formatDate(lead.createdAt)}</td>
+            <td>${lead.name}</td>
+            <td>${lead.mobileNumber}</td>
+            <td>${lead.email}</td>
+            <td>${lead.source}</td>
+            <td>${lead.status}</td>`;
+          followupTable.appendChild(tr);
+        });
+      }
+
+      // Fill all leads table
+      const tbody = document.querySelector("#leadTable tbody");
+      tbody.innerHTML = "";
+      leads.forEach(lead => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${formatDate(lead.createdAt)}</td>
+          <td>${lead.name}</td>
+          <td>${lead.mobileNumber}</td>
+          <td>${lead.email}</td>
+          <td>${lead.source}</td>
+          <td>
+            <select onchange="updateStatus('${lead.id}', this.value)">
+              <option ${lead.status === 'NEW' ? 'selected' : ''}>NEW</option>
+              <option ${lead.status === 'Contacted' ? 'selected' : ''}>Contacted</option>
+              <option ${lead.status === 'Closed' ? 'selected' : ''}>Closed</option>
+              <option ${lead.status === 'Converted' ? 'selected' : ''}>Converted</option>
+            </select>
+          </td>`;
+        tbody.appendChild(tr);
+      });
+
+    } catch (err) {
+      console.error("Error fetching leads:", err);
+    }
+  }
+
+  async function updateStatus(id, status) {
+    await fetch(`${API_URL}/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ status })
+    });
+    loadLeads();
+  }
+
+  function formatDate(dateStr) {
+    if (!dateStr) return "—";
+    const d = new Date(dateStr);
+    if (isNaN(d)) return "—";
+    const day = String(d.getDate()).padStart(2, "0");
+    const month = String(d.getMonth() + 1).padStart(2, "0");
+    const year = d.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+
+  function showSection(id, e) {
+    document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+    document.querySelectorAll(".sidebar a").forEach(a => a.classList.remove("active"));
+    e.target.classList.add("active");
+  }
+
+  loadLeads();
+</script>
+
+</body>
+</html>

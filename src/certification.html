@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gyantrix Academy - Home</title>
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="../headerfooter/footerstyle.css">
+</head>
+<body>
+   <div id="header"></div>
+
+  <section class="connectplan">
+  <h1>View or Request Your Course Certificate</h1>
+
+  <div class="connectform-container">
+    <div class="connectform">
+      <form class="lead-table" id="universalForm">
+        <label for="name">Your Name<span class="star">*</span>:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address<span class="star">*</span>:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="number">Mobile Number<span class="star">*</span>:</label>
+        <input type="tel" id="number" name="mobileNumber" required>
+
+        <input type="hidden" name="source" id="sourceField" value="certificationForm">
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="messages"></div>
+    </div>
+
+    <div class="connectform">
+      <img src="../public/images/certificationimage.png" alt="Certification">
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+  <script src="script.js"></script>
+  <script src="navbar.js"></script>
+  <script src="./headerfooter/include.js"></script>
+</body>
+</html>

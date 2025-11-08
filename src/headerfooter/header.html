@@ -1,0 +1,462 @@
+<!-- Top Bar -->
+<div class="site-header">
+    <div class="top-bar" id="topBar">
+  <div class="top-right">
+    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+</svg><span class="ga-name">gyantrix@academy.com</span>
+  </div>
+  <div>
+    <span>📞 7386879818</span>
+  </div>
+  <div class="top-left">
+    <span>Follow us:</span>
+    <a href="https://www.linkedin.com/company/109240608/admin/dashboard/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+    <a href="https://www.facebook.com/photo/?fbid=122101027089065794&set=a.122101027125065794" target="_blank"><img src="https://acbrd.org.au/wp-content/uploads/2020/08/facebook-circular-logo.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/gyantrix_academy/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+    <a href="https://wa.me/7386879818" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="Whatsapp"></a>
+    <a href="https://x.com/GyantixAcademy" target="_blank" aria-label="Twitter">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+    </a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="navbar" id="mainNav">
+  <div class="logo-heading-container">
+    <a href="../index1.html"><img src="../../public/images/gyantrix1.png" alt="Gyantrix"></a>
+  <div class="headingnames">
+    <h3 class="head1" id="gyantrix">GYANTRIX</h3>
+    <h3 class="head1" id="academy">ACADEMY</h3>
+  </div>
+  </div>
+  <a href="../studentCourse.html" class="student-btn">🎓 Student Programs</a>
+  <button class="hamburger" id="hamburger">☰</button>
+  <nav>
+    <a href="../index1.html">Home</a>
+    <div class="dropdown">
+      <button class="drop-btn">About us<span class="arrow">▿</span></button>
+      <div class="dropdown-content">
+        <a href="../about.html">About</a>
+        <a href="../faqs.html">FAQs</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="drop-btn">Courses<span class="arrow">▿</span></button>
+      <div class="dropdown-content">
+        <!-- <a href="courses.html">Popular</a> -->
+        <a href="../it.html">IT</a>
+        <a href="../pharma.html">Pharma</a>
+        <a href="../nonit.html">Non IT</a>
+        <a href="../management.html">Management</a>
+        <a href="../agriculture.html">Agriculture</a>
+      </div>
+    </div>
+    <a href="../events.html">Events</a>
+    <a href="../careers.html">Careers</a>
+    <a href="../contact.html">Contact us</a>
+  </nav>
+</header>
+</div>
+
+
+<style>
+
+.site-header {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  position: relative;
+  z-index: 2000;
+  margin-bottom: 5rem;
+}
+
+/* === Top Bar === */
+.site-header .top-bar {
+  background-color: #0c2d57;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 50px;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  transition: top 0.4s ease;
+}
+
+.site-header .top-bar.hidden {
+  top: -100px;
+}
+
+.site-header .top-left,
+.site-header .top-right {
+  display: flex;
+  align-items: center;
+}
+
+.site-header .top-left span {
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.site-header .top-left a img {
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.site-header .top-left a img:hover {
+  transform: scale(1.1);
+}
+
+.site-header .top-right span {
+  margin-left: 15px;
+  font-weight: 400;
+}
+.site-header .top-right .svgicon{
+  margin-right: -0.5rem;
+}
+
+/* === Navbar === */
+.site-header .navbar {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 3%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0.15rem 0.625rem rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  height: 12%;
+  top: 40px;
+  z-index: 1999;
+  transition: top 0.4s ease;
+  font-family: 'Roboto', 'Roboto Fallback';
+}
+
+.site-header .navbar.fixed {
+  top: -3%;
+}
+.site-header .navbar img {
+  width: 2rem;
+  height: auto;
+  margin: 1rem;
+}
+
+.site-header .logo-heading-container {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.site-header .headingnames {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  margin-left: -3rem;
+}
+
+.site-header #gyantrix {
+  background: linear-gradient(90deg, #ffb84d, #ffd700, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.site-header #academy {
+  color: rgb(19, 167, 220);
+  margin-top: -1.5rem;
+}
+
+/* === Navbar Links === */
+.site-header .navbar nav a {
+  margin: 0 1rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.site-header .navbar nav a:hover,
+.site-header .dropdown button:hover {
+  color: #e64520;
+  transform: translateY(-2px);
+}
+
+/* === Dropdown === */
+.site-header .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.site-header .drop-btn {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.site-header .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  flex-direction: column;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.site-header .dropdown-content a {
+  display: block;
+  padding: 0.6rem 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.site-header .dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.site-header .dropdown.open .dropdown-content {
+  display: flex;
+}
+
+.site-header .dropdown .arrow {
+  margin-left: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.site-header .dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+.student-btn {
+  display: inline-block;
+  padding: 6px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(90deg, navy, teal, #3b82f6);
+  background-size: 300%;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(228, 58, 178, 0.4);
+}
+
+/* Gradient animation */
+.student-btn:hover {
+  background-position: 100% 0;
+  box-shadow: 0 0 35px rgba(228, 58, 178, 0.7),
+              0 0 20px rgba(59, 130, 246, 0.6);
+  transform: translateY(-3px);
+}
+
+/* Inner light sweep */
+.student-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.25);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.student-btn:hover::before {
+  left: 120%;
+}
+
+/* Subtle breathing glow */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(228, 58, 178, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.6); }
+}
+
+.student-btn {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* === Mobile Navbar === */
+@media (max-width: 768px) {
+  .student-btn {
+    font-size: 13px;
+    padding: 7px 14px;
+    margin-top: 8px;
+  }
+  .site-header{
+    margin-bottom: 10rem;
+  }
+  .site-header .top-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .site-header .top-left,
+  .site-header .top-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .site-header .navbar {
+    top: 72px;
+  }
+
+  .site-header .hamburger {
+    display: block !important;
+    background: #ffc107;
+    border: none;
+    color: #0c2d57;
+    font-size: 2rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .site-header .navbar nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 0.5rem 0;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .site-header .navbar nav.active {
+    display: flex;
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .site-header .navbar nav a,
+  .site-header .dropdown {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+
+  .site-header .dropdown-content {
+    display: none;
+    flex-direction: column;
+    width: 80%;
+    margin: 0.3rem auto;
+    background: #f9f8fa;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+
+  .site-header .dropdown.open .dropdown-content {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .site-header .dropdown-content a {
+    padding: 0.6rem 1rem;
+    background-color: #f7f3fe;
+    margin: 0.1rem 0;
+    border-radius: 4px;
+  }
+
+  .site-header .dropdown-content a:hover {
+    background: #0c2d57;
+    color: #fff;
+  }
+}
+
+/* === Desktop Navbar === */
+@media (min-width: 769px) {
+  .student-btn {
+    padding: 7px 16px;
+    font-size: 14px;
+  }
+  .site-header .hamburger {
+    display: none !important;
+  }
+
+  .site-header .navbar nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    box-shadow: none;
+  }
+}
+
+</style>
+
+
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+  // Toggle dropdowns
+  document.querySelectorAll('.drop-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dropdown = button.parentElement;
+
+      // Close other dropdowns
+      document.querySelectorAll('.dropdown').forEach(d => {
+        if (d !== dropdown) d.classList.remove('open');
+      });
+
+      // Toggle current dropdown
+      dropdown.classList.toggle('open');
+    });
+  });
+
+  // Close dropdowns if click outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    }
+  });
+
+});
+
+
+const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('.navbar nav');
+
+  hamburger.addEventListener('click', () => {
+    // Toggle nav visibility
+    nav.classList.toggle('active');
+
+  });
+</script> -->

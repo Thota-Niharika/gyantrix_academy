@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gyantrix Academy - Curtain Effect</title>
+
+  <style>
+    /* === GLOBAL RESET === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+    /* === BANNER SECTION (CURTAIN) === */
+    .banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      text-align: center;
+      z-index: 10;
+      transition: transform 1s ease-in-out;
+    }
+
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .banner button {
+      background: #ff6b35;
+      color: #fff;
+      border: none;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .banner button:hover {
+      background: #ff884d;
+      transform: translateY(-3px);
+    }
+
+    .banner.slide-up {
+      transform: translateY(-100%);
+    }
+     /* === LEFT CONTENT (GYANTRIX letters) === */
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0.6rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .left .letter-line {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0;
+      transform: translateX(-40px);
+      animation: slideIn 0.6s forwards;
+    }
+
+    .left .letter-box {
+      width: 35px;
+      height: 35px;
+      background-color: #ff4b4b;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .left .word {
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    /* stagger each letter’s animation */
+    .left .letter-line:nth-child(1) { animation-delay: 0.2s; }
+    .left .letter-line:nth-child(2) { animation-delay: 0.4s; }
+    .left .letter-line:nth-child(3) { animation-delay: 0.6s; }
+    .left .letter-line:nth-child(4) { animation-delay: 0.8s; }
+    .left .letter-line:nth-child(5) { animation-delay: 1.0s; }
+    .left .letter-line:nth-child(6) { animation-delay: 1.2s; }
+    .left .letter-line:nth-child(7) { animation-delay: 1.4s; }
+    .left .letter-line:nth-child(8) { animation-delay: 1.6s; }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* === RIGHT SIDE IMAGE === */
+    .right {
+      flex: 1;
+      display: flex;
+      animation: fadeIn 2s ease-in-out 0.8s both;
+    }
+
+    .right img {
+      width: 85%;
+      max-width: 420px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transform: scale(0.9);
+      animation: zoomIn 1.8s ease forwards 1s;
+    }
+
+    @keyframes zoomIn {
+      to { transform: scale(1); }
+    }
+
+    /* === MAIN CONTENT (index1.html simulation) === */
+    .main-content {
+      position: relative;
+      top: 100vh; /* starts below the banner */
+      background: #f9f9f9;
+      color: #333;
+      padding: 4rem 2rem;
+      transition: all 0.6s ease;
+      min-height: 100vh;
+    }
+
+    .main-content h2 {
+      font-size: 2rem;
+      color: #0c2d57;
+      margin-bottom: 1rem;
+    }
+
+    .main-content p {
+      line-height: 1.8;
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner .left,
+  .banner .right {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  }
+
+  .banner .right img {
+    width: 200px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- === Banner (Curtain Intro) === -->
+  <section class="banner" id="banner">
+    <h1>Welcome to Gyantrix Academy</h1>
+    <p>Empowering learners with knowledge, skills, and real-world opportunities.</p>
+    <div class="left">
+      <div class="letter-line"><div class="letter-box">G</div><div class="word">uiding</div></div>
+      <div class="letter-line"><div class="letter-box">Y</div><div class="word">oung</div></div>
+      <div class="letter-line"><div class="letter-box">A</div><div class="word">spirants</div></div>
+      <div class="letter-line"><div class="letter-box">N</div><div class="word">urturing</div></div>
+      <div class="letter-line"><div class="letter-box">T</div><div class="word">alent through</div></div>
+      <div class="letter-line"><div class="letter-box">R</div><div class="word">eal</div></div>
+      <div class="letter-line"><div class="letter-box">I</div><div class="word">nnovation and</div></div>
+      <div class="letter-line"><div class="letter-box">X</div><div class="word">cellence</div></div>
+    </div>
+    <button id="enterBtn">Enter Site ↓</button>
+  </section>
+
+  <!-- === Main Content (index1.html section) === -->
+  <section class="main-content" id="mainContent">
+    <h2>Discover Our Programs</h2>
+    <p>At Gyantrix Academy, we offer hands-on learning experiences, expert mentorship, and globally recognized certifications. Explore courses across IT, Management, Pharma, Agriculture, and more — all designed to make you industry-ready.</p>
+    
+    <h2>Why Choose Us?</h2>
+    <p>✔ Industry-aligned Curriculum<br>
+       ✔ Live Projects and Internships<br>
+       ✔ Career Assistance and Mentorship<br>
+       ✔ 100% Practical-Based Learning
+    </p>
+
+    <p>Scroll down to explore more sections of the website...</p>
+  </section>
+
+  <script>
+    const banner = document.getElementById("banner");
+    const enterBtn = document.getElementById("enterBtn");
+
+    // --- On button click: slide up banner ---
+    enterBtn.addEventListener("click", () => {
+      banner.classList.add("slide-up");
+      document.body.style.overflowY = "auto"; // allow scrolling after reveal
+    });
+
+    // --- Optional: auto slide up on scroll ---
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        banner.classList.add("slide-up");
+        document.body.style.overflowY = "auto";
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gyantrix Academy - Curtain Reveal</title>
+
+  <style>
+    /* === GLOBAL RESET === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* === CURTAIN BANNER === */
+    .banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(135deg, #002b5b, #00509e);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: white;
+      z-index: 10;
+      transition: transform 1s ease-in-out;
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    .banner.slide-up {
+      transform: translateY(-100%);
+    }
+
+    /* === LEFT CONTENT (GYANTRIX letters) === */
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0.6rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .left .letter-line {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0;
+      transform: translateX(-40px);
+      animation: slideIn 0.6s forwards;
+    }
+
+    .left .letter-box {
+      width: 35px;
+      height: 35px;
+      background-color: #ff4b4b;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .left .word {
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    /* stagger each letter’s animation */
+    .left .letter-line:nth-child(1) { animation-delay: 0.2s; }
+    .left .letter-line:nth-child(2) { animation-delay: 0.4s; }
+    .left .letter-line:nth-child(3) { animation-delay: 0.6s; }
+    .left .letter-line:nth-child(4) { animation-delay: 0.8s; }
+    .left .letter-line:nth-child(5) { animation-delay: 1.0s; }
+    .left .letter-line:nth-child(6) { animation-delay: 1.2s; }
+    .left .letter-line:nth-child(7) { animation-delay: 1.4s; }
+    .left .letter-line:nth-child(8) { animation-delay: 1.6s; }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* === RIGHT SIDE IMAGE === */
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 2s ease-in-out 0.8s both;
+    }
+
+    .right img {
+      width: 85%;
+      max-width: 420px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transform: scale(0.9);
+      animation: zoomIn 1.8s ease forwards 1s;
+    }
+
+    @keyframes zoomIn {
+      to { transform: scale(1); }
+    }
+
+    /* === ENTER BUTTON === */
+    .enter-btn {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ff6b35;
+      color: white;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 2rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .enter-btn:hover {
+      background: #ff884d;
+      transform: translateX(-50%) translateY(-3px);
+    }
+
+    /* === MAIN CONTENT === */
+    .main-content {
+      position: relative;
+      top: 100vh;
+      background: #f9f9f9;
+      color: #333;
+      padding: 4rem 2rem;
+      min-height: 100vh;
+      transition: all 0.6s ease;
+    }
+
+    .main-content h2 {
+      font-size: 2rem;
+      color: #0c2d57;
+      margin-bottom: 1rem;
+    }
+
+    .main-content p {
+      line-height: 1.8;
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      .banner {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+      }
+      .right img {
+        width: 70%;
+      }
+      .enter-btn {
+        bottom: 20px;
+      }
+      .left {
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <section class="banner" id="banner">
+    <div class="left">
+      <div class="letter-line"><div class="letter-box">G</div><div class="word">uiding</div></div>
+      <div class="letter-line"><div class="letter-box">Y</div><div class="word">oung</div></div>
+      <div class="letter-line"><div class="letter-box">A</div><div class="word">spirants</div></div>
+      <div class="letter-line"><div class="letter-box">N</div><div class="word">urturing</div></div>
+      <div class="letter-line"><div class="letter-box">T</div><div class="word">alent through</div></div>
+      <div class="letter-line"><div class="letter-box">R</div><div class="word">eal</div></div>
+      <div class="letter-line"><div class="letter-box">I</div><div class="word">nnovation and</div></div>
+      <div class="letter-line"><div class="letter-box">X</div><div class="word">cellence</div></div>
+    </div>
+
+    <div class="right">
+      <img src="bannerimage_ga.png" alt="Gyantrix Academy Logo">
+    </div>
+
+    <button class="enter-btn" id="enterBtn">Enter Site ↓</button>
+  </section>
+
+
+  <section class="main-content" id="mainContent">
+    <h2>Welcome to Gyantrix Academy</h2>
+    <p>At Gyantrix Academy, we empower learners through innovation and excellence. Our programs provide hands-on experience, mentorship, and globally recognized certifications to help you excel in your chosen field.</p>
+
+    <h2>Why Gyantrix?</h2>
+    <p>✔ Globally Recognized Curriculum<br>
+       ✔ Real-World Projects and Internships<br>
+       ✔ Dedicated Mentorship and Career Support<br>
+       ✔ Transforming Aspirants into Achievers</p>
+
+    <p>Scroll down to explore our courses, events, and more.</p>
+  </section>
+
+  <script>
+    const banner = document.getElementById("banner");
+    const enterBtn = document.getElementById("enterBtn");
+
+    // Slide banner up on button click
+    enterBtn.addEventListener("click", () => {
+      banner.classList.add("slide-up");
+      document.body.style.overflowY = "auto";
+    });
+
+    // Auto-slide when scrolled slightly
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 40) {
+        banner.classList.add("slide-up");
+        document.body.style.overflowY = "auto";
+      }
+    });
+  </script>
+
+</body>
+</html> -->

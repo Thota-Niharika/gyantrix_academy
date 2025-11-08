@@ -1,0 +1,171 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f7f9fb;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews-section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0a214a;
+}
+
+.review-summary {
+  background: #0a214a;
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.summary-left {
+  text-align: center;
+  flex: 1;
+  min-width: 180px;
+}
+
+.summary-left h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.summary-left .stars {
+  color: #ffd700;
+  margin-top: 5px;
+}
+
+.summary-right {
+  flex: 2;
+  min-width: 250px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.bar span {
+  width: 60px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.bar-line {
+  height: 10px;
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 10px;
+  background: #ffd700;
+}
+
+.review-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 25px;
+  background: #f9fafc;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e64520;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.review-content h4 {
+  margin: 0;
+  color: #0a214a;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1rem;
+  margin: 4px 0;
+}
+
+.review-form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.review-form textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.post-btn {
+  background: linear-gradient(45deg, #0a214a, #e64520);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.post-btn:hover {
+  opacity: 0.9;
+}
+
+.view-more {
+  display: block;
+  margin: 20px auto 0;
+  background: #0a214a;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.view-more:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .review-summary {
+    flex-direction: column;
+  }
+}

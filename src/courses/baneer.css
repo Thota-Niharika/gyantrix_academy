@@ -1,0 +1,141 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg, #0b1b3f, #5fd7f2);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Hero Section Layout */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 1500px;
+  padding: 3rem 2rem;
+  gap: 3rem;
+}
+
+/* Left Content */
+.left-content {
+  flex: 1;
+}
+
+.award {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* GYANTRIX Text Layout */
+.gyantrix-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space between each line */
+  margin-bottom: 2rem;
+}
+
+.gyn {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  /* letter-spacing: 0.5px; */
+}
+
+.highlight {
+  background-color: #ff4d4d;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  min-width: 2.2rem;
+  text-align: center;
+}
+
+/* Button */
+.expert-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #ff4d4d;
+  padding: 0.8rem 1.8rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.expert-btn:hover {
+  background-color: #ff4d4d;
+}
+
+/* Center Video */
+.center-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.center-content video {
+  width: 100%;
+  max-width: 600px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Right Content */
+.right-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-content img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.logo-text h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+}
+
+.logo-text h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gyantrix-text {
+    align-items: center;
+  }
+
+  .highlight {
+    margin-right: 0.5rem;
+  }
+}
